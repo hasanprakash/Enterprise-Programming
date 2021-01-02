@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EP</title>
+	<script type="text/javascript">
+
+		function fun() {
+			var user = document.f1.user.value;
+			var pass = document.f1.password.value;
+			console.log(user+" "+pass+" "+user.length);
+			if(user=="" || pass=="")
+				alert("username or password cant be empty");
+			else if(user.length < 8 || pass.length < 8)
+				alert("username or password length should be atleast 8");
+			else if(user == pass)
+				alert("welcome "+user);
+
+
+
+
+		}
+ 		
+	</script>
+</head>
+<body>
+	<form name="f1" onsubmit="fun()" method="post">
+		<input type="text" placeholder="Enter username" name="user"><br>
+		<input type="password" placeholder="Enter password" name="password"><br>
+		<button type="submit">submit</button>
+	</form>
+</body>
+</html>
